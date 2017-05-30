@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define OK 1
+#define ERROR 0
+#define OVERFLOW 0
+#define LIST_INIT_SIZE 100
+#define LISTINCREMENT 10
+typedef struct
+{
+	int *elem;
+	int length;
+	int listsize;
+}SqList;
+int InitList_Sq( SqList L )
+{
+	L.elem=(int *)malloc(LIST_INIT_SIZE*sizeof(int));
+	If(!L.elem){
+		exit(OVERFLOW);
+	}
+	L.length=0;
+	L.listsize=LIST_INIT_SIZE;
+	return OK;
+}
+int CreateList_Sq(SqList L)
+{
+	int i;
+	printf("Input the datas:");
+	for(i=0;i<L.length;i++){
+		scanf("%d",&L.elem[i]);
+		return OK;
+	}
+		
+}
+void main()
+{
+	clrscr();
+	int i,n;
+	Sqlist L;
+	InitList_Sq(L);
+	printf("\nInput the length of the list L:");
+	scanf("%d",&n);
+	L.length=n;
+	CreateList_Sq(L);
+	printf("Output the datas:");
+	for(i=0;i<L.length;i++){
+		printf("%d",L.elem[i]);
+	}
+
+}
