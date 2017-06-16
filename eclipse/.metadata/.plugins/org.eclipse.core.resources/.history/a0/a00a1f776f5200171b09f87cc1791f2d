@@ -1,0 +1,30 @@
+
+public class PassageCar extends Car {
+	private int  peopleCapacity;
+	private String name;//车名
+    private double  rent;//租金
+    public PassageCar(String name,double rent,int peopleCapacity){//构造方法可以在实例化对象时候九尾这个对象进行赋值
+           this.name=name;//this.name是访问成员变量
+           this.rent=rent;
+           this.peopleCapacity=peopleCapacity;
+   }
+
+   public int getPeopleCapacity(){
+           return peopleCapacity;
+   }
+   public void setPeopleCapacity(int  peoplecapacity){
+           this.peopleCapacity=peoplecapacity;
+   }
+   public String getName(){
+       return name;
+   }
+   public void setName(String carName){
+       this.name=carName;
+   }
+   public double getRent(){
+       return  rent;
+   }
+   public void setRent(String carRent){
+	   this.name=carRent;
+   }
+}

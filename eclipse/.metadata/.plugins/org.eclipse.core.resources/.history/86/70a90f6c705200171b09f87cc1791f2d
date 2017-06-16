@@ -1,0 +1,25 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+public class Test {
+	public static void main(String[] args){//定义一个类数组
+        Car[] car={new PassageCar("奥迪",500,4),new PassageCar("马自达",400,4),new Truck("金龙",800,20),new Truck("松花江",400,4),new Truck("依维柯",1000,20)};
+        System.out.println("欢迎使用答答租车系统");
+        System.out.println("你是否要租车:1是 2否");
+        Scanner scan=new Scanner(System.in);
+        int input=scan.nextInt();//这两句是读取输入值
+        if(input==1){
+                System.out.println("你可租车的类型及其价格表：");
+                System.out.print("序号\t\t汽车名称\t\t租金\t\t容量\t\t\n");
+                int i=1;
+                for(Car Cars:car){
+                        if(Cars instanceof PassageCar){
+                        	System.out.println(" "+i+"\t\t"+Cars.getName()+"\t\t"+Cars.getRent()+"元/天\t"+((PassageCar)Cars).getPeopleCapacity()+"人\t\t");
+
+                        }else{
+                        	System.out.println(" "+i+"\t\t"+Cars.getName()+"\t\t"+Cars.getRent()+"元/天\t"+((Truck)Cars).getCargoCapacity()+"吨\t\t");
+                        }
+                        ++i;
+                }
+          }
+	 } 
+}
