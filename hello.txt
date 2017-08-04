@@ -1,3 +1,7 @@
 hello world
+<<<<<<< HEAD
 hello china
 hello world
+=======
+hello ecust
+>>>>>>> 085b809
